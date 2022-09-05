@@ -14,6 +14,13 @@ themesDir = "../.." # Not necessary on production sites
     favicon = "favicon.ico"
     logo = ""
     custom_css = ["css/custom.css"]
+    custom_js = [""]
+
+[params.separator] # Separators between sections on the home page and top menu
+    show = true
+
+[params.blog_rss] # Show the RSS feed in the menu bar
+    show = true
 
 [params.hero]
     textColor = "" # Empty for default color
@@ -23,12 +30,9 @@ themesDir = "../.." # Not necessary on production sites
     cta = "Contact"
     link = "contact" # Relative URL
 
-[params.separator] # Separators between sections on the home page
-    show = true
-
 [params.fa] # Font Awesome options
-    version = "5.7.2"
-    integrity = "sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+    version = "5.15.4"
+    integrity = "sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
 
 [params.form] # Contact form
     netlify = true

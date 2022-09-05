@@ -158,13 +158,6 @@ e.g.
 
 This will output `© 2008-2022 - Site Title`
 
-### Agreements
-
-```toml
-[params.agreement]
-    message = ""    # You can use HTML tags
-```
-
 ### Posts
 
 ```toml
@@ -224,10 +217,10 @@ To learn more about privacy configuration check the [official documentation](htt
 
 ### Custom CSS
 
-To add custom CSS you have to create a folder called `assets` in the root of your project. Then, create another folder called `css` inside `assets`. And finally, a file called `custom.css` inside `css` with your styles.
+To add custom CSS you have to create a folder called `static` in the root of your project. Then, create another folder called `css` inside `assets`. And finally, a file called `custom.css` inside `css` with your styles.
 
 ```bash
-$ mkdir -p ./assets/css/
+$ mkdir -p ./static/css/
 ```
 
 ## Archetypes
@@ -264,6 +257,10 @@ images: []
 draft: true
 menu: main
 weight: 0
+cover:
+    image: "/images/cover_image.jpg"
+    alt: "Image Description"
+    relative: false
 ---
 ```
 
@@ -273,6 +270,7 @@ Some properties are used as follows:
 - _description_: in the case of the home page the description is not shown. In the rest of the single pages it is shown as a subtitle.
 - _images_: in the case of the home page the first image is used as the background image for the hero and to share on social networks (with [Twitter Cards](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards.html) and [Facebook Graph](https://developers.facebook.com/docs/graph-api/)). In every other page or post is used only for share on social networks.
 - _weight_: sets the order of the items in the menu.
+The _cover_ section defines a Cover Image for the page.
 
 ## Home page Sections
 
@@ -319,17 +317,27 @@ Inside this file you'll find something like this:
 ---
 title: "Bad example"
 description: ""
+author: ""
 date: 2018-12-27T21:09:45+01:00
 publishDate: 2018-12-27T21:09:45+01:00
 images: []
 draft: true
 tags: []
+showToc: true
+cover:
+    image: "/images/cover_image.jpg"
+    alt: "Image Description"
+    relative: false
 ---
 ```
 
 The _title_ and _description_ are used as the main title and subtitle respectively.
 
-> You can find more information about each parameter in the [official documentation](https://gohugo.io/content-management/front-matter/).
+> You can find more information about the basic parameters in the [official documentation](https://gohugo.io/content-management/front-matter/).
+
+The _showToc_ is used to generate a Table of Contents from all h1 and h2 tags
+
+The _cover_ section defines a Cover Image for the post.
 
 Then, the corresponding section will show a list of cards with the _title_, the _date_, a _summary of the content_ (truncated to 480 words) and a list of _tags_ if any.
 

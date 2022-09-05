@@ -1,4 +1,8 @@
 {{ define "main" }}
+<main class="post__body">
+{{- $isHidden := .Params.cover.hidden | default site.Params.cover.hiddenInSingle | default site.Params.cover.hidden }}
+{{- partial "cover.html" (dict "cxt" . "IsHome" false "isHidden" $isHidden) }}
+</main>
 <main class="contact">
     <h1 class="contact__title">{{ .Title }}</h1>
     <p class="contact__content">{{ .Description }}</p>
