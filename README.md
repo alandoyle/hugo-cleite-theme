@@ -58,7 +58,6 @@ theme = "cleite"
 ```toml
 baseurl = "/"           # The base URL of your Hugo site
 title = "titlehere"     # The title of your Hugo site
-author = "authorhere"   # The author name
 googleAnalytics = ""    # Your Google Analytics tracking ID
 enableRobotsTXT = true
 language = "en"
@@ -72,9 +71,11 @@ There's a lot more information about the basic configuration of an Hugo site [he
 
 ```toml
 [params]
-    description = "" # Description for the meta description tag
-    favicon = ""     # Relative URL for your favicon
-    logo = ""        # Absolute URL for your logo
+    author = ""       # The author name
+    description = ""  # Description for the meta description tag
+    favicon = ""      # Relative URL for your favicon
+    logo = ""         # Absolute URL for your logo
+    custom_css = [""] # Array of custom CSS files
 ```
 
 ### Hero

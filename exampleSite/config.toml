@@ -9,6 +9,7 @@ theme = "hugo-cleite-theme"
 themesDir = "../.." # Not necessary on production sites
 
 [params]
+    author = "Alan Doyle"
     description = "Cleite is a simple, fast and responsive theme for Hugo with a strong focus on accessibility based on the Terrassa theme."
     favicon = "favicon.ico"
     logo = ""
