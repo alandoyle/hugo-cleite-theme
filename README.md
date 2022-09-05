@@ -78,6 +78,20 @@ There's a lot more information about the basic configuration of an Hugo site [he
     custom_css = [""] # Array of custom CSS files
 ```
 
+### Separators between sections on the home page and top menu
+
+```toml
+[params.separator]
+    show = true
+```
+
+### Show the RSS feed in the menu bar
+
+```toml
+[params.blog_rss]
+    show = true
+```
+
 ### Hero
 
 ```toml
@@ -92,13 +106,6 @@ There's a lot more information about the basic configuration of an Hugo site [he
     show = true
     cta = "Contact"  # Text message of the CTA
     link = "contact" # Relative URL
-```
-
-### Separators between Home sections
-
-```toml
-[params.separator]
-    show = true
 ```
 
 ### Contact information
