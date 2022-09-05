@@ -1,0 +1,19 @@
+{{ $reset := resources.Get "css/reset.css" }}
+{{ $base := resources.Get "css/base.css" }}
+{{ $style := resources.Get "css/style.css" }}
+{{ $homepage := resources.Get "css/homepage.css" }}
+{{ $cover := resources.Get "css/cover.css" }}
+{{ $toc := resources.Get "css/toc.css" }}
+{{ $media := resources.Get "css/media-queries.css" }}
+{{ $animations := resources.Get "css/animations.css" }}
+{{ $bundle := slice $reset $base $style $homepage $cover $toc $media $animations | resources.Concat "css/bundle.css" }}
+
+{{ $css := $bundle | resources.Minify }}
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Asul">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Coda">
+<link rel="stylesheet" href="{{ $css.Permalink }}">
+
+{{ range .Site.Params.custom_css -}}
+    <link rel="stylesheet" href="{{ . | absURL }}">
+{{- end }}
