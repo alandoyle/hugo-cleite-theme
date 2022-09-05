@@ -2,7 +2,7 @@
 
 Cleite is a simple, fast and responsive theme for Hugo with a strong focus on accessibility built on top of the, now archived, [Terrassa](https://github.com/danielkvist/hugo-terrassa-theme/) theme.
 
-![Hugo Cleite theme screenshot](https://github.com/cleite/hugo-cleite-theme/blob/master/images/screenshot.png)
+![Hugo Cleite theme screenshot](https://raw.githubusercontent.com/alandoyle/hugo-cleite-theme/main/images/screenshot.png)
 
 Cleite is the Irish word for 'feather' symbolizing it's light weight nature.
 
@@ -332,7 +332,7 @@ The _title_ and _description_ are used as the main title and subtitle respective
 
 Then, the corresponding section will show a list of cards with the _title_, the _date_, a _summary of the content_ (truncated to 480 words) and a list of _tags_ if any.
 
-![Hugo Cleite theme Blog section screenshot](https://github.com/alandoyle/hugo-cleite-theme/blob/master/images/blog-screenshot.png)
+![Hugo Cleite theme Blog section screenshot](https://raw.githubusercontent.com/alandoyle/hugo-cleite-theme/main/images/blog-screenshot.png)
 
 ### Contact
 
