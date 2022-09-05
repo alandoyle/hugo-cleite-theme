@@ -12,6 +12,7 @@ themesDir = "../.." # Not necessary on production sites
     description = "Cleite is a simple, fast and responsive theme for Hugo with a strong focus on accessibility based on the Terrassa theme."
     favicon = "favicon.ico"
     logo = ""
+    custom_css = ["css/custom.css"]
 
 [params.hero]
     textColor = "" # Empty for default color

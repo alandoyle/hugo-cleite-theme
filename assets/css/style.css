@@ -21,7 +21,7 @@
 
 .header__title__link {
 	color: var(--primary-text);
-	font-family: Asul;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 	font-weight: heavy;
 	font-size: 150%;
 	line-height: 1.2;

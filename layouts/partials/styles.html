@@ -9,9 +9,6 @@
 {{ $bundle := slice $reset $base $style $homepage $cover $toc $media $animations | resources.Concat "css/bundle.css" }}
 
 {{ $css := $bundle | resources.Minify }}
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Asul">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Coda">
 <link rel="stylesheet" href="{{ $css.Permalink }}">
 
 {{ range .Site.Params.custom_css -}}
