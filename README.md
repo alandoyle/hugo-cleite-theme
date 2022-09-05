@@ -71,7 +71,7 @@ There's a lot more information about the basic configuration of an Hugo site [he
 
 ```toml
 [params]
-    author = ""       # The author name
+    author = ""       # The default author name, if an author is not specified in the front matter of an individual post.
     description = ""  # Description for the meta description tag
     favicon = ""      # Relative URL for your favicon
     logo = ""         # Absolute URL for your logo
