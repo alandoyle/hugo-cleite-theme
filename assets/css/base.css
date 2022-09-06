@@ -51,7 +51,7 @@ figcaption {
 hr {
     color: var(--divider);
     opacity: 0.30;
-    width: 25%;
+    width: 75%;
 }
 
 i {

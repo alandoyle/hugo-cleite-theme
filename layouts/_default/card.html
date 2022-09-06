@@ -1,28 +1,30 @@
 <article class="card">
-    <header class="card__header">
-        <h1 class="card__header__title">
-            <a href="{{ .Permalink }}" class="card__header__link" alt="{{ .Title }}.">
-                {{ .Title }}
-            </a>
-        </h1>
-        {{ if ne .Type "page" }}
-        {{ if and $.Site.Params.posts.showDate $.Site.Params.posts.showAuthor }}
-        <p class="card__header__date date">
-            {{ dateFormat $.Site.Params.posts.dateFormat .Date }} By {{ if .Params.author }}{{ $.Params.author }}{{ else }}{{ $.Site.Params.author }}{{ end }}.
-        </p>
-        {{ else if $.Site.Params.posts.showDate }}
-        <p class="card__header__date date">{{ dateFormat $.Site.Params.posts.dateFormat .Date }}</p>
-        {{ else if $.Site.Params.posts.showAuthor }}
-        <p class="card__header__author author">By {{ $.Params.author }}.</p>
-        {{ end }}
-        {{ end }}
-    </header>
-
-    <main class="card__body">
-        {{ .Content | truncate 480 }}
-    </main>
-
-    <footer class="card__footer">
-        {{ .Render "tags" }}
-    </footer>
+    <div class="card__row">
+        <div class="card__left">
+            {{ if ne .Type "page" }}
+                {{ if $.Site.Params.posts.showDate }}
+                <p class="card__header__date date">
+                <a href="{{ .Permalink }}" alt="{{ .Title }}." title="{{ .Title }}." class="card__header__link">
+                {{ dateFormat $.Site.Params.posts.dateFormat .Date }}</a></p>
+                {{ else if $.Site.Params.posts.showAuthor }}
+                <p class="card__header__author author">By {{ $.Params.author }}.</p>
+                {{ end }}
+            {{ end }}
+        </div>
+        <div class="card__right">
+            <header class="card__header">
+                <h1 class="card__header__title">
+                    <a href="{{ .Permalink }}" class="card__header__link" alt="{{ .Title }}.">
+                        {{ .Title }}
+                    </a>
+                </h1>
+            </header>
+            <main class="card__body">
+                {{ .Content | truncate 360 }}
+            </main>
+            <footer class="card__footer">
+                <a href="{{ .Permalink }}" alt="{{ .Title }}." title="{{ .Title }}.">Read more...</a>
+            </footer>
+        </div>
+    </div>
 </article>

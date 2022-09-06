@@ -1,0 +1,41 @@
+/* CARD */
+.card {
+	margin-bottom: 1.75rem;
+	max-width: 900px;
+	text-justify: distribute;
+	width: 70%;
+}
+
+.card__row {
+	display: flex;
+}
+
+.card__right {
+	flex: 70%;
+}
+
+.card__left {
+	flex: 30%;
+	margin-top: 30px;
+	font-style: italic;
+}
+
+.card__header__link {
+	color: var(--primary-text);
+}
+
+.card__header__link:hover {
+	color: var(--primary);
+}
+
+.card__header__author {
+	--margin-bottom: 0.75rem;
+	text-align: left;
+}
+
+.card__header__title {
+	font-family: Asul;
+	font-weight: heavy;
+	line-height: 1.2;
+	margin: 1.414rem 0 0.5rem;
+}

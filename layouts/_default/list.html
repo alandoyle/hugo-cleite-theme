@@ -2,7 +2,10 @@
 <main class="content">
 	{{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "posts") }}
 
-	{{ range $paginator.Pages }}
+	{{ range $index, $element := $paginator.Pages }}
+	{{ if not (in $index "0") }}
+		<hr />
+	{{ end }}
 	{{ .Render "card" }}
 	{{ end }}
 

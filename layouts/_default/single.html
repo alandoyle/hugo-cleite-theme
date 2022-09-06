@@ -1,49 +1,63 @@
 {{ define "main" }}
-<main class="post__body">
-{{- $isHidden := .Params.cover.hidden | default site.Params.cover.hiddenInSingle | default site.Params.cover.hidden }}
-{{- partial "cover.html" (dict "cxt" . "IsHome" false "isHidden" $isHidden) }}
-</main>
 <article class="post">
-    <header class="post__header">
-        <h1 class="post__title">{{ .Title }}
-        {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
-        </h1>
-        {{ if .Description }}
-        <p class="post__subtitle">{{ .Description }}</p>
-        {{ end }}
-        {{ if ne .Type "page" }}
-            {{ if and $.Site.Params.posts.showDate $.Site.Params.posts.showAuthor }}
-                <p class="post__date date">
-                    {{ dateFormat $.Site.Params.posts.dateFormat .Date }} By {{ if .Params.author }}{{ $.Params.author }}{{ else }}{{ $.Site.Params.author }}{{ end }}.
-                </p>
-            {{ else if $.Site.Params.posts.showDate }}
-                <p class="post__date date">{{ dateFormat $.Site.Params.posts.dateFormat .Date }}</p>
-            {{ else if $.Site.Params.posts.showAuthor }}
-                <p class="post__author author">By {{ $.Params.author }}.</p>
-                {{ end }}
-        {{ end }}
-    </header>
+	<div class="post__row">
+		{{- $isHidden := .Params.cover.hidden | default site.Params.cover.hiddenInSingle | default site.Params.cover.hidden }}
+		{{- partial "cover.html" (dict "cxt" . "IsHome" false "isHidden" $isHidden) }}
+	</div>
+		{{ if ne .Type "page" }}
+	<div class="post__row">
+		<div class="post__left">
+            {{- $email := .Params.email | default site.Params.email }} 
+            {{- $author := .Params.author | default site.Params.author }} 
+			{{ if and $.Site.Params.posts.showDate $.Site.Params.posts.showAuthor }}
+				<p><img style="border-radius: 50%;" src="https://www.gravatar.com/avatar/{{ md5 $email }}?s=120&d=mp"></p>
+				<p class="post__date date">
+					Written {{ dateFormat $.Site.Params.posts.dateFormat .Date }}<br />By {{ $author }}.
+				</p>
+			{{ else if $.Site.Params.posts.showDate }}
+				<p class="post__date date">{{ dateFormat $.Site.Params.posts.dateFormat .Date }}</p>
+			{{ else if $.Site.Params.posts.showAuthor }}
+				<p class="post__author author">By {{ $author }}.</p>
+			{{ end }}
+			{{ if ne .Type "page" }}
+				{{ .Render "tags" }}
+			{{ end }}
+		</div>
+		<div class="post__right">
+		{{ end }}
+			<header class="post__header">
+				<h1 class="post__title">{{ .Title }}
+				{{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
+				</h1>
+				{{ if .Description }}
+				<p class="post__subtitle">{{ .Description }}</p>
+				{{ end }}
+			</header>
 
-    {{ if ne .Type "page" }}
-    <main class="post__body">
-        {{- if (.Param "ShowToc") }}
-        {{- partial "toc.html" . }}
-        {{- end }}
-        {{ .Content }}
-    </main>
-    {{ else }}
-    <main class="post__body" style="margin-bottom: 3rem;">
-        {{- if (.Param "ShowToc") }}
-        {{- partial "toc.html" . }}
-        {{- end }}
-        {{ .Content }}
-    </main>
-    {{ end }}
+			{{ if ne .Type "page" }}
+			<main class="post__body">
+				{{- if (.Param "ShowToc") }}
+				{{- partial "toc.html" . }}
+				{{- end }}
+				{{ .Content }}
+			</main>
+			{{ else }}
+			<main class="post__body" style="margin-bottom: 3rem;">
+				{{- if (.Param "ShowToc") }}
+				{{- partial "toc.html" . }}
+				{{- end }}
+				{{ .Content }}
+			</main>
+			{{ end }}
 
-    {{ if ne .Type "page" }}
-    <footer class="post__footer">
-        {{ .Render "tags" }}
-    </footer>
-    {{ end }}
+			{{ if ne .Type "page" }}
+			<footer class="post__footer">
+				<hr />
+			</footer>
+			{{ end }}
+	{{ if ne .Type "page" }}
+		</div>
+	</div>
+	{{ end }}
 </article>
 {{ end }}

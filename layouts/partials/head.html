@@ -31,9 +31,4 @@
 
 	<!-- CSS -->
 	{{ partial "styles.html" . }}
-	
-	<!-- Custom javascript -->
-	{{ range .Site.Params.custom_js -}}
-		<script type="text/javascript" src="{{ . | absURL }}"></script>
-	{{- end }}
 </head>

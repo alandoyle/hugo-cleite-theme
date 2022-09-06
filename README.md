@@ -20,6 +20,7 @@ Cleite is pronounced **CLEH-CHA**
 - Ready for blogging.
 - Cover image support.
 - Table of contents support.
+- Gravatar support.
 - RSS support.
 - Multilingual Support.
 
@@ -71,7 +72,10 @@ There's a lot more information about the basic configuration of an Hugo site [he
 
 ```toml
 [params]
-    author = ""       # The default author name, if an author is not specified in the front matter of an individual post.
+    author = ""       # The default author name, if an author is not specified 
+                      # in the front matter of an individual post.
+    email = ""        # The default email address, if an email address is not
+                      # specified in the front matter of an individual post.
     description = ""  # Description for the meta description tag
     favicon = ""      # Relative URL for your favicon
     logo = ""         # Absolute URL for your logo
@@ -268,6 +272,7 @@ cover:
     image: "/images/cover_image.jpg"
     alt: "Image Description"
     relative: false
+    hidden: true
 ---
 ```
 
@@ -335,6 +340,7 @@ cover:
     image: "/images/cover_image.jpg"
     alt: "Image Description"
     relative: false
+    hidden: true
 ---
 ```
 
