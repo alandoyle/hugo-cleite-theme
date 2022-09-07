@@ -10,7 +10,7 @@
             {{- $email := .Params.email | default site.Params.email }} 
             {{- $author := .Params.author | default site.Params.author }} 
 			{{ if and $.Site.Params.posts.showDate $.Site.Params.posts.showAuthor }}
-				<p><img style="border-radius: 50%;" src="https://www.gravatar.com/avatar/{{ md5 $email }}?s=120&d=mp"></p>
+				<p><img style="border-radius: 50%;" src="https://www.gravatar.com/avatar/{{ md5 $email }}?s=120&d=mp" alt="{{ $author }}" title="{{ $author }}"></p>
 				<p class="post__date date">
 					Written {{ dateFormat $.Site.Params.posts.dateFormat .Date }}<br />By {{ $author }}.
 				</p>
