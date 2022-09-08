@@ -176,13 +176,7 @@ This will output `© 2008-2022 - Site Title`
     showAuthor = true
     showDate = true
     showTags = true
-    dateFormat = "Jan 06, 2006" // Aug 30, 2022
 ```
-
-See [Hugo date formats](https://gohugo.io/functions/dateformat/#datetime-formatting-layouts) for further information.
-
-NOTE: Hugo date formats do not work with Cloudflare Pages, the date format must be specified verbosely then Cloudflare Pages will format the date correctly e.g. Jan 06, 2006
-
 
 ### Form
 

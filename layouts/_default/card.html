@@ -5,7 +5,7 @@
                 {{ if $.Site.Params.posts.showDate }}
                 <p class="card__header__date date">
                 <a href="{{ .Permalink }}" alt="{{ .Title }}." title="{{ .Title }}." class="card__header__link">
-                {{ dateFormat $.Site.Params.posts.dateFormat .Date }}</a></p>
+                {{ .Date | time.Format ":date_long" }}</a></p>
                 {{ else if $.Site.Params.posts.showAuthor }}
                 <p class="card__header__author author">By {{ $.Params.author }}.</p>
                 {{ end }}
