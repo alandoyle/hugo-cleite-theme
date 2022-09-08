@@ -53,7 +53,7 @@ themesDir = "../.." # Not necessary on production sites
     showAuthor = true
     showDate = true
     showTags = true
-    dateFormat = "Jan 06, 2006"
+    dateFormat = "Jan 03, 2006"
 
 [params.contact] # Contact info
     email = "example@gmail.com"
