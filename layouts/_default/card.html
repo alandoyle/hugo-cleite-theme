@@ -7,7 +7,8 @@
                 <a href="{{ .Permalink }}" alt="{{ .Title }}." title="{{ .Title }}." class="card__header__link">
                 {{ .Date | time.Format ":date_long" }}</a></p>
                 {{ else if $.Site.Params.posts.showAuthor }}
-                <p class="card__header__author author">By {{ $.Params.author }}.</p>
+                {{- $author := .Params.author | default site.Params.author }} 
+                <p class="card__header__author author">By {{ $author }}.</p>
                 {{ end }}
             {{ end }}
         </div>

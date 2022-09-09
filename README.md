@@ -268,7 +268,7 @@ weight: 0
 cover:
     image: "/images/cover_image.jpg"
     alt: "Image Description"
-    relative: false
+    halfSize: true
     hidden: true
 ---
 ```

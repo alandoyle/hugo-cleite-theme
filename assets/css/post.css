@@ -23,7 +23,7 @@
 	grid-template-areas: "title" "date" "subtitle" "author";
 	grid-template-rows: auto;
 	justify-content: center;
-	padding: 0 20%;
+	padding: 0 10%;
 }
 
 .post__title {
