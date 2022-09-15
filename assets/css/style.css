@@ -17,6 +17,7 @@
 	font-size: 1.1rem;
 	justify-content: flex-start;
 	margin: 1rem 4.5rem;
+    width: 100%;
 }
 
 .header__title__link {
@@ -40,6 +41,7 @@
 	display: flex;
 	hyphens: none;
 	margin-right: 4.5rem;
+    width: 100%;
 }
 
 .menu__items {
@@ -369,6 +371,7 @@
 	grid-area: copy;
 	justify-content: flex-end;
 	padding: 1.75rem;
+	width: 100%;
 }
 
 .copy > p {

@@ -2,23 +2,6 @@
 <article class="post">
 	{{ if ne .Type "page" }}
 	<div class="post__row">
-		<div class="post__left">
-			{{- $email := .Params.email | default site.Params.email }} 
-			{{- $author := .Params.author | default site.Params.author }} 
-			{{ if and $.Site.Params.posts.showDate $.Site.Params.posts.showAuthor }}
-				<p><img style="border-radius: 50%;" src="https://www.gravatar.com/avatar/{{ md5 $email }}?s=120&d=mp" alt="{{ $author }}" title="{{ $author }}"></p>
-				<p class="post__date date">
-					Written {{ .Date | time.Format ":date_long" }}<br />By {{ $author }}.
-				</p>
-			{{ else if $.Site.Params.posts.showDate }}
-				<p class="post__date date">{{ .Date | time.Format ":date_long" }}</p>
-			{{ else if $.Site.Params.posts.showAuthor }}
-				<p class="post__author author">By {{ $author }}.</p>
-			{{ end }}
-			{{ if ne .Type "page" }}
-				{{ .Render "tags" }}
-			{{ end }}
-		</div>
 		<div class="post__right">
 		{{ end }}
 			<header class="post__header">
@@ -56,6 +39,23 @@
 			</footer>
 			{{ end }}
 	{{ if ne .Type "page" }}
+		</div>
+		<div class="post__left">
+			{{- $email := .Params.email | default site.Params.email }} 
+			{{- $author := .Params.author | default site.Params.author }} 
+			{{ if and $.Site.Params.posts.showDate $.Site.Params.posts.showAuthor }}
+				<p><img style="border-radius: 50%;" src="https://www.gravatar.com/avatar/{{ md5 $email }}?s=120&d=mp" alt="{{ $author }}" title="{{ $author }}"></p>
+				<p class="post__date date">
+					Written {{ .Date | time.Format ":date_long" }}<br />By {{ $author }}.
+				</p>
+			{{ else if $.Site.Params.posts.showDate }}
+				<p class="post__date date">{{ .Date | time.Format ":date_long" }}</p>
+			{{ else if $.Site.Params.posts.showAuthor }}
+				<p class="post__author author">By {{ $author }}.</p>
+			{{ end }}
+			{{ if ne .Type "page" }}
+				{{ .Render "tags" }}
+			{{ end }}
 		</div>
 	</div>
 	{{ end }}

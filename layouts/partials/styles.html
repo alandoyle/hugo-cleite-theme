@@ -6,9 +6,10 @@
 {{ $homepage := resources.Get "css/homepage.css" }}
 {{ $cover := resources.Get "css/cover.css" }}
 {{ $toc := resources.Get "css/toc.css" }}
+{{ $stt := resources.Get "css/scroll2top.css" }}
 {{ $media := resources.Get "css/media-queries.css" }}
 {{ $animations := resources.Get "css/animations.css" }}
-{{ $bundle := slice $reset $base $style $card $post $homepage $cover $toc $media $animations | resources.Concat "css/bundle.css" }}
+{{ $bundle := slice $reset $base $style $card $post $homepage $cover $toc $stt $media $animations | resources.Concat "css/bundle.css" }}
 
 {{ $css := $bundle | resources.Minify }}
 <link rel="stylesheet" href="{{ $css.Permalink }}">

@@ -5,17 +5,29 @@
 }
 
 .post__row {
-	display: flex;
+	box-sizing: border-box;
 	margin: 1.75rem 10% 0.75rem;
 }
 
+/* Create two columns that floats next to each other */
 .post__right {
-	flex: 85%;
+	float: right;
+	width: 83%;
 }
 
 .post__left {
-	flex: 15%;
+	float: left;
+	width: 17%;
+	padding: 30px;
+	text-align: left;
 	margin-top: 30px;
+}
+
+/* Clear floats after the columns */
+.post__row:after {
+	content: "";
+	display: table;
+	clear: both;
 }
 
 .post__header {
@@ -99,4 +111,66 @@
 	display: flex;
 	justify-content: center;
 	margin: 0 30% 0.75rem;
+}
+
+@media only screen and (max-width: 1199px) {
+	.post__right {
+		width: 72%;
+		float: right;
+	}
+
+	.post__left {
+		width: 25%;
+		float: left;
+		margin-left: 30px;
+        padding: 30px;
+        text-align: left;
+        margin-top: 30px;
+	}
+
+	.post {
+		padding: 0px;
+	}
+
+	.post__row {
+		box-sizing: border-box;
+		margin: 0px;
+	}
+
+	.post__body {
+		margin: 30px;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.post__right {
+		width: 66%;
+		float: right;
+	}
+
+	.post__left {
+		width: 30%;
+		float: left;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.post__right, .post__left {
+		padding-left: 10px;
+		padding-right: 10px;
+		width: 100%;
+	}
+
+	.post {
+		padding: 0px;
+	}
+
+	.post__row {
+		box-sizing: border-box;
+		margin: 0px;
+	}
+
+	.post__body {
+		margin: 10px;
+	}
 }

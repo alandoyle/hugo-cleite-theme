@@ -8,10 +8,6 @@
 		margin: 2.75rem 19%;
 	}
 
-	.post__body {
-		margin: 0 19%;
-	}
-
 	.pagination {
 		width: 40%;
 	}
@@ -34,6 +30,10 @@
 		align-items: flex-end;
 		padding-right: 4.5rem;
 	}
+
+    .hamburger__toggle__icon {
+        padding-right: 10px;
+    }
 }
 
 @media only screen and (max-width: 992px) {

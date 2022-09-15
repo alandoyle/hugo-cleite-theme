@@ -7,21 +7,44 @@
 }
 
 .card__row {
-	display: flex;
+	box-sizing: border-box;
+	margin: 1.75rem 10% 0.75rem;
 }
 
+/* Create two columns that floats next to each other */
 .card__right {
-	flex: 70%;
+    float: right;
+    width: 83%;
 }
 
 .card__left {
-	flex: 30%;
-	margin-top: 30px;
-	font-style: italic;
+    float: left;
+    width: 17%;
+    padding-top: 30px;
+    text-align: left;
 }
+
+/* Clear floats after the columns */
+.card__row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1024px) {
+  .card__right, .card__left {
+    width: 100%;
+  }
+  .card__left {
+    padding-left: 0px;
+  }
+}
+
 
 .card__header__link {
 	color: var(--primary-text);
+	text-align: left;
 }
 
 .card__header__link:hover {
@@ -30,7 +53,6 @@
 
 .card__header__author {
 	--margin-bottom: 0.75rem;
-	text-align: left;
 }
 
 .card__header__title {
@@ -38,4 +60,8 @@
 	font-weight: heavy;
 	line-height: 1.2;
 	margin: 1.414rem 0 0.5rem;
+}
+
+.card__header__date {
+    text-align: left;
 }
