@@ -1,6 +1,7 @@
 {{ $reset := resources.Get "css/reset.css" }}
 {{ $base := resources.Get "css/base.css" }}
 {{ $style := resources.Get "css/style.css" }}
+{{ $contact := resources.Get "css/contact.css" }}
 {{ $card := resources.Get "css/card.css" }}
 {{ $post := resources.Get "css/post.css" }}
 {{ $homepage := resources.Get "css/homepage.css" }}
@@ -9,7 +10,7 @@
 {{ $stt := resources.Get "css/scroll2top.css" }}
 {{ $media := resources.Get "css/media-queries.css" }}
 {{ $animations := resources.Get "css/animations.css" }}
-{{ $bundle := slice $reset $base $style $card $post $homepage $cover $toc $stt $media $animations | resources.Concat "css/bundle.css" }}
+{{ $bundle := slice $reset $base $style $contact $card $post $homepage $cover $toc $stt $media $animations | resources.Concat "css/bundle.css" }}
 
 {{ $css := $bundle | resources.Minify }}
 <link rel="stylesheet" href="{{ $css.Permalink }}">
