@@ -1,9 +1,8 @@
 /* CARD */
 .card {
 	margin-bottom: 1.75rem;
-	max-width: 900px;
 	text-justify: distribute;
-	width: 70%;
+	width: 100%;
 }
 
 .card__row {
@@ -21,8 +20,8 @@
     float: left;
     width: 17%;
     padding-top: 30px;
-    text-align: left;
-}
+    text-align: center;
+  }
 
 /* Clear floats after the columns */
 .card__row:after {
@@ -37,7 +36,9 @@
     width: 100%;
   }
   .card__left {
-    padding-left: 0px;
+    padding: 0px;
+    visibility: hidden;
+    height: 0px;
   }
 }
 
@@ -63,5 +64,5 @@
 }
 
 .card__header__date {
-    text-align: left;
+	text-align: center;
 }

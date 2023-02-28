@@ -172,6 +172,7 @@
 	flex-direction: column;
 	justify-items: center;
 	min-height: 90vh;
+	width: 100%;
 }
 
 /* PAGINATION */

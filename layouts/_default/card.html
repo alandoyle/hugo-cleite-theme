@@ -17,14 +17,16 @@
         </div>
         <div class="card__left">
             {{ if ne .Type "page" }}
+                {{- $author := .Params.author | default site.Params.author }} 
                 {{ if $.Site.Params.posts.showDate }}
                 <p class="card__header__date date">
-                <a href="{{ .Permalink }}" alt="{{ .Title }}." title="{{ .Title }}." class="card__header__link">
-                {{ .Date | time.Format ":date_long" }}</a></p>
+                    <a href="{{ .Permalink }}" alt="{{ .Title }}." title="{{ .Title }}." class="card__header__link">
+                    {{ .Date | time.Format ":date_long" }}</a>
+                </p>
                 {{ else if $.Site.Params.posts.showAuthor }}
-                {{- $author := .Params.author | default site.Params.author }} 
-                <p class="card__header__author author">By {{ $author }}.</p>
+                    <p class="card__header__author author">By {{ $author }}.</p>
                 {{ end }}
+				{{ .Render "tags" }}
             {{ end }}
         </div>
     </div>

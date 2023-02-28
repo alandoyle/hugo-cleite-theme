@@ -19,7 +19,7 @@
 	float: left;
 	width: 17%;
 	padding: 30px;
-	text-align: left;
+	text-align: center;
 	margin-top: 30px;
 }
 
@@ -58,6 +58,7 @@
 	grid-area: date;
 	margin-bottom: 1.75rem;
 	font-style: italic;
+	text-align: center;
 }
 
 .post__body {
