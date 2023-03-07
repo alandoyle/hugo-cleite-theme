@@ -1,7 +1,15 @@
 {{ define "main" }}
-<main class="post__body">
-    {{- $isHidden := .Params.cover.hidden | default site.Params.cover.hiddenInSingle | default site.Params.cover.hidden }}
-    {{- partial "cover.html" (dict "cxt" . "IsHome" false "isHidden" $isHidden) }}
-</main>
-{{ partial "sections.html" . }}
+<article class="post">
+    <header class="post__header">
+        <h1 class="post__title">{{ .Title }}</h1>
+        {{ if .Description }}
+        <p class="post__subtitle">{{ .Description }}</p>
+        {{ end }}
+    </header>
+    <main class="post__body">
+        {{- $isHidden := .Params.cover.hidden | default site.Params.cover.hiddenInSingle | default site.Params.cover.hidden }}
+        {{- partial "cover.html" (dict "cxt" . "IsHome" false "isHidden" $isHidden) }}
+    </main>
+    {{ partial "sections.html" . }}
+</article>
 {{ end }}
