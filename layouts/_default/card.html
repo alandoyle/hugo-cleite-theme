@@ -9,7 +9,8 @@
                 </h1>
             </header>
             <main class="card__body">
-                {{ .Content | truncate 360 }}
+                {{- $author := .Params.author | default site.Params.author }} 
+                <p class="card__header__author author">By {{ $author }}.</p>
             </main>
             <footer class="card__footer">
                 <a href="{{ .Permalink }}" alt="{{ .Title }}." title="{{ .Title }}.">Read more...</a>
