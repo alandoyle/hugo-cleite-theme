@@ -4,4 +4,4 @@ All contributions are welcome.
 
 **Issues** or **Bugs**: submit a new issue with information about your issue or bug. If you have a solution, then submit a new PR as described above.
 
-Thank you very much for helping to improve Cleithe.
+Thank you very much for helping to improve Cleite.
