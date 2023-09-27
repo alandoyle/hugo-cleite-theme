@@ -3,10 +3,14 @@ title = "Cleite"
 author = "Alan Doyle (alandoyle)"
 googleAnalytics = ""
 defaultContentLanguage = "en"
-paginate = 5
+paginate = 20
+enableEmoji = true
 
 theme = "hugo-cleite-theme"
 themesDir = "../.." # Not necessary on production sites
+
+[permalinks]
+  posts = "/blog/:title/"
 
 [params]
     author = "Alan Doyle"
@@ -31,12 +35,12 @@ themesDir = "../.." # Not necessary on production sites
     link = "contact" # Relative URL
 
 [params.fa] # Font Awesome options
-    version = "5.15.4"
-    integrity = "sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+    version = "6.4.2"
+    integrity = "sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="
 
 [params.form] # Contact form
-    netlify = true
-    action = "https://formspree.io/your@email.com"
+    netlify = false
+    action = "https://public.herotofu.com/v1/auto-generated-endpoint"
     method = "POST"
     inputNameName = "name"
     inputNameLabel = "Name"
@@ -53,6 +57,7 @@ themesDir = "../.." # Not necessary on production sites
     showAuthor = true
     showDate = true
     showTags = true
+    dateFormat = "Jan 03, 2006"
 
 [params.contact] # Contact info
     email = "example@gmail.com"
@@ -63,7 +68,9 @@ themesDir = "../.." # Not necessary on production sites
 [params.social]
     twitter = "https://twitter.com/john"
     facebook = "https://facebook.com/john"
+    docker = "https://hub.docker.com/u/john"
     github = "https://github.com/john"
+    ubuntu = "https://launchpad.net/~jphn"
     gitlab = ""
     codepen = "https://codepen.io/john"
     instagram = "https://instagram.com/john"
@@ -74,10 +81,11 @@ themesDir = "../.." # Not necessary on production sites
     mastodon = ""
     tumblr = ""
     flickr = ""
+    steam = "https://steamcommunity.com/id/john"
     "500px" = ""
 
 [params.copy] # Copyright
-    copy = "2008-<NOW> - <TITLE>" # Empty for default content
+    copy = "2008-<NOW> - <TITLE>. All rights reserved." # Empty for default content
 
 [privacy]
     [privacy.googleAnalytics]
