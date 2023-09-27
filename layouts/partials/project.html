@@ -1,0 +1,19 @@
+<section class="section">
+{{ $header := $.Page.Params.header }}
+{{ if $.Page.Params.header }}
+    <div class="section__content">
+        {{ .Content }}
+    </div>
+{{ if $.Site.Params.separator.show }}
+    {{ partial "separator.html" . }}
+{{ end  }}
+{{ else  }}
+<a href="{{ $.Page.Params.sectionurl }}">
+    <span>
+        <i class="{{ $.Page.Params.faicon }}"></i>
+    </span>
+    {{ .Title }}{{ if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
+</a>
+<p>{{ .Description }}</p>
+{{ end  }}
+</section>

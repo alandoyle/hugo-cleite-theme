@@ -72,7 +72,7 @@ There's a lot more information about the basic configuration of an Hugo site [he
 
 ```toml
 [params]
-    author = ""       # The default author name, if an author is not specified 
+    author = ""       # The default author name, if an author is not specified
                       # in the front matter of an individual post.
     email = ""        # The default email address, if an email address is not
                       # specified in the front matter of an individual post.
@@ -139,6 +139,7 @@ There's a lot more information about the basic configuration of an Hugo site [he
     mastodon = ""
     tumblr = ""
     flickr = ""
+    steam = ""
     "500px" = ""
 ```
 
@@ -161,13 +162,13 @@ There's a lot more information about the basic configuration of an Hugo site [he
 `<NOW>` in the copyright message will be replaced with this year.
 `<TITLE>` in the copyright message will be replaced with the site title ($.Site.Title)
 
-e.g. 
+e.g.
 ```toml
 [params.copy]
     copy = "&copy; 2008-<NOW> - <TITLE>"
 ```
 
-This will output `© 2008-2022 - Site Title`
+This will output `© 2008-2023 - Site Title`
 
 ### Posts
 
@@ -281,7 +282,7 @@ Some properties are used as follows:
 - _weight_: sets the order of the items in the menu.
 The _cover_ section defines a Cover Image for the page.
 
-## Home page Sections
+## Sections
 
 To create a new section in your Home page follow the next steps:
 
@@ -297,12 +298,21 @@ title: "Example"
 description: ""
 draft: true
 weight: 0
+subsection: ""
+sectionurl: ""
+faicon: ""
 ---
 ```
 
 The _title_ is used as the title of your new section and the content is the body. At this moment the _description_ is not used for anything.
 
 The _weight_ defines the order in case of having more than one section.
+
+The _subsection_ is used to determine which page is going to use this particular section.
+
+The _sectionUrl_ is used for the list page to link to the Project Page if the _subsection_ is "projects".
+
+The _faicon_ is the Font Awesome CSS icon, e.g **fab fa-windows** or **fas fa-gamepad**
 
 ### Blog or List pages
 

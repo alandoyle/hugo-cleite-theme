@@ -8,9 +8,6 @@
 				<h1 class="post__title">{{ .Title }}
 				{{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
 				</h1>
-				{{ if .Description }}
-				<p class="post__subtitle">{{ .Description }}</p>
-				{{ end }}
 			</header>
 
 			{{ if ne .Type "page" }}
@@ -43,18 +40,9 @@
 		<div class="post__left">
 			{{- $email := .Params.email | default site.Params.email }}
 			{{- $author := .Params.author | default site.Params.author }}
-			{{ if and $.Site.Params.posts.showDate $.Site.Params.posts.showAuthor }}
+			{{ if $.Site.Params.posts.showAuthor }}
 				<p><img style="border-radius: 50%;" src="https://www.gravatar.com/avatar/{{ md5 $email }}?s=120&d=mp" alt="{{ $author }}" title="{{ $author }}"></p>
-				<p class="post__date date">
-					Written by<br />{{ $author }}<br /><br />{{ .Date | time.Format ":date_long" }}.
-				</p>
-			{{ else if $.Site.Params.posts.showDate }}
-				<p class="post__date date">{{ .Date | time.Format ":date_long" }}</p>
-			{{ else if $.Site.Params.posts.showAuthor }}
-				<p class="post__author author">By {{ $author }}.</p>
-			{{ end }}
-			{{ if ne .Type "page" }}
-				{{ .Render "tags" }}
+				<p class="post__author author">Written by {{ $author }}.</p>
 			{{ end }}
 		</div>
 	</div>
