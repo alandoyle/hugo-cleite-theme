@@ -19,6 +19,7 @@ themesDir = "../.." # Not necessary on production sites
     logo = ""
     custom_css = ["css/custom.css"]
     custom_js = [""]
+    faicon = "fa-solid fa-circle-info"
 
 [params.separator] # Separators between sections on the home page and top menu
     show = true

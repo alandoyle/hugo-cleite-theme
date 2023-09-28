@@ -80,6 +80,7 @@ There's a lot more information about the basic configuration of an Hugo site [he
     favicon = ""      # Relative URL for your favicon
     logo = ""         # Absolute URL for your logo
     custom_css = [""] # Array of custom CSS files
+    faicon = ""       # Default FontAwesome class for displaying beside a Title e.g. "fa-solid fa-circle-info"
 ```
 
 ### Separators between sections on the home page and top menu

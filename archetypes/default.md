@@ -3,6 +3,7 @@ title: "{{ replace .Name "-" " " | title }}"
 description: ""
 author:
 email:
+faicon:
 date: {{ .Date }}
 publishDate: {{ .Date }}
 images: []

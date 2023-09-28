@@ -4,6 +4,10 @@
             <header class="card__header">
                 <h1 class="card__header__title">
                     <a href="{{ .Permalink }}" class="card__header__link" alt="{{ .Title }}.">
+                        {{- $faicon := .Params.FaIcon }}
+                        {{- if $faicon }}
+                        <span class="{{ $faicon }}"></span>&nbsp;&nbsp;
+                        {{ end }}
                         {{ .Title }}
                     </a>
                 </h1>

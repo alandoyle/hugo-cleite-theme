@@ -5,7 +5,12 @@
 		<div class="post__right">
 		{{ end }}
 			<header class="post__header">
-				<h1 class="post__title">{{ .Title }}
+				<h1 class="post__title">
+				{{- $faicon := .Params.FaIcon }}
+				{{- if $faicon }}
+				<span class="{{ $faicon }}"></span>&nbsp;&nbsp;
+				{{ end }}
+				{{ .Title }}
 				{{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
 				</h1>
 				{{ if .Description }}

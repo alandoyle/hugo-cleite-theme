@@ -2,7 +2,7 @@
 .card {
 	margin-bottom: 1.75rem;
 	text-justify: distribute;
-	width: 66%;
+	width: 90%;
 }
 
 .card__row {
@@ -13,13 +13,14 @@
 /* Create two columns that floats next to each other */
 .card__right {
     float: right;
-    width: 83%;
+    width: 75%;
 }
 
 .card__left {
     float: left;
-    width: 17%;
+    width: 24%;
     padding-top: 30px;
+    padding-right: 10px;
     text-align: center;
   }
 
@@ -37,6 +38,7 @@
   }
   .card__left {
     padding: 0px;
+    margin-right: 200px;;
     visibility: hidden;
     height: 0px;
   }

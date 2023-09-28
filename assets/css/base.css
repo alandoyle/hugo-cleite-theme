@@ -1,9 +1,9 @@
 :root {
     /* Font Sizes */
-    --title: 4.998rem;
-    --subtitle: 3.827rem;
-    --header: 3.999rem;
-    --subheader: 2.414rem;
+    --title: 3.998rem;
+    --subtitle: 2.827rem;
+    --header: 2.999rem;
+    --subheader: 1.414rem;
 
     /* Colors */
     --primary: #9090a3;
