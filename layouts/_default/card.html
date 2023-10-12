@@ -9,6 +9,7 @@
                         <span class="{{ $faicon }}"></span>&nbsp;&nbsp;
                         {{ end }}
                         {{ .Title }}
+                        {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
                     </a>
                 </h1>
             </header>
