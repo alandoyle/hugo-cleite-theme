@@ -66,8 +66,8 @@
 }
 
 .post__body > blockquote > p {
-	margin: 0.75rem 24%;
-	text-align: center;
+	margin: 0.75rem 6%;
+	text-align: justify;
 }
 
 .post__body > blockquote > p::before,
