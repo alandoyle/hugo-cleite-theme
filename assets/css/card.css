@@ -31,6 +31,18 @@
   clear: both;
 }
 
+.card__content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  width: 100%;
+}
+
+.card__description {
+  width: 50%;
+}
+
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 1024px) {
   .card__right, .card__left {
@@ -42,8 +54,10 @@
     visibility: hidden;
     height: 0px;
   }
+  .card__description {
+    width: 80%;
+  }
 }
-
 
 .card__header__link {
 	color: var(--primary-text);

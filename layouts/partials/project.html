@@ -1,19 +1,24 @@
-<section class="section">
-{{ $header := $.Page.Params.header }}
-{{ if $.Page.Params.header }}
-    <div class="section__content">
-        {{ .Content }}
+<article class="card">
+    <div class="card__row">
+        <div class="card__content">
+            <header class="card__header">
+                <h1 class="card__header__title">
+                    <a href="{{ $.Page.Params.sectionurl }}" class="card__header__link" alt="{{ .Title }}.">
+                        {{- $faicon := .Params.FaIcon }}
+                        {{- if $faicon }}
+                        <span class="{{ $faicon }}"></span>&nbsp;&nbsp;
+                        {{ end }}
+                        {{ .Title }}
+                        {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
+                    </a>
+                </h1>
+            </header>
+            <main class="card__description">
+                <p>{{ .Description }}</p>
+            </main>
+            <footer class="card__footer">
+                <a href="{{ $.Page.Params.sectionurl }}" alt="{{ .Title }}." title="{{ .Title }}.">Find out more...</a>
+            </footer>
+        </div>
     </div>
-{{ if $.Site.Params.separator.show }}
-    {{ partial "separator.html" . }}
-{{ end  }}
-{{ else  }}
-<a href="{{ $.Page.Params.sectionurl }}">
-    <span>
-        <i class="{{ $.Page.Params.faicon }}"></i>
-    </span>
-    {{ .Title }}{{ if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
-</a>
-<p>{{ .Description }}</p>
-{{ end  }}
-</section>
+</article>

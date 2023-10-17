@@ -50,6 +50,10 @@
 	width: 100%;
 }
 
+.menu__items > li {
+	list-style: none;
+}
+
 .menu__items__item {
 	margin: 0 1.5rem;
 }
@@ -202,7 +206,7 @@
 	background-color: var(--primary-dark);
 	display: grid;
 	grid-auto-flow: row;
-	grid-template-areas: "social social social" "contact contact copy";
+	grid-template-areas: "social social social" "contact copy copy";
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(2, auto);
 }
@@ -265,6 +269,10 @@
 	width: 100%;
 }
 
+.footer__contact > p {
+	text-align: left;
+}
+
 .footer__contact__item {
 	color: var(--white);
 	margin: 0;
@@ -278,6 +286,23 @@
 .footer__contact__link,
 .footer__contact__link:hover {
 	color: var(--white);
+}
+
+
+/* COPY */
+.copy {
+	align-items: center;
+	display: flex;
+	font-size: 0.95rem;
+	grid-area: copy;
+	justify-content: flex-end;
+	padding: 1.75rem;
+	width: 100%;
+}
+
+.copy > p {
+	margin: 0;
+	padding: 5px 40px;
 }
 
 /* 404 */
@@ -364,22 +389,6 @@
     }
 }
 
-/* COPY */
-.copy {
-	align-items: center;
-	display: flex;
-	font-size: 0.95rem;
-	grid-area: copy;
-	justify-content: flex-end;
-	padding: 1.75rem;
-	width: 100%;
-}
-
-.copy > p {
-	margin: 0;
-	padding: 5px 40px;
-}
-
 /* AUTHOR */
 .author {
 	font-size: 0.95rem;
@@ -395,7 +404,8 @@
 
 /* TAGS */
 .tags {
-	padding: 0;
+	width: 100%;
+	text-align: center;
 }
 
 .tags__tag {

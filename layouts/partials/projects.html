@@ -2,6 +2,8 @@
 {{ $items := where (where $.Site.RegularPages "Type" "sections") "Params.subsection" "==" $subsection }}
 {{ $len := (len $items) }}
 
+<div class="content">
 {{ range $i, $e := $items }}
     {{ partial "project.html" . }}
 {{ end }}
+</div>

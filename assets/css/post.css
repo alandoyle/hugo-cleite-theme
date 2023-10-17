@@ -7,20 +7,7 @@
 .post__row {
 	box-sizing: border-box;
 	margin: 1.75rem 10% 0.75rem;
-}
-
-/* Create two columns that floats next to each other */
-.post__right {
-	float: right;
-	width: 83%;
-}
-
-.post__left {
-	float: left;
-	width: 17%;
-	padding: 30px;
-	text-align: center;
-	margin-top: 30px;
+	max-width: 80%;
 }
 
 /* Clear floats after the columns */
@@ -73,8 +60,9 @@
 	list-style-type: decimal;
 }
 
+.post__body > ol > ul,
 .post__body > ul {
-	list-style-type: disc;
+		list-style-type: disc;
 }
 
 .post__body > blockquote > p {
@@ -103,9 +91,9 @@
 	margin-bottom: 1.1rem;
 }
 
-.post__body > ul,
-.post__body > ol {
-	margin-left: 3.75rem;
+.post__body > ul > li,
+.post__body > ol > li{
+	text-align: left;
 }
 
 .post__footer {
@@ -115,20 +103,6 @@
 }
 
 @media only screen and (max-width: 1199px) {
-	.post__right {
-		width: 72%;
-		float: right;
-	}
-
-	.post__left {
-		width: 25%;
-		float: left;
-		margin-left: 30px;
-        padding: 30px;
-        text-align: left;
-        margin-top: 30px;
-	}
-
 	.post {
 		padding: 0px;
 	}
@@ -144,34 +118,27 @@
 }
 
 @media only screen and (max-width: 1024px) {
-	.post__right {
-		width: 66%;
-		float: right;
-	}
-
-	.post__left {
-		width: 30%;
-		float: left;
+	.post__row {
+		box-sizing: border-box;
+		margin: 1.75rem 10% 0.75rem;
+		width: 85%;
 	}
 }
 
 @media only screen and (max-width: 768px) {
-	.post__right, .post__left {
-		padding-left: 10px;
-		padding-right: 10px;
-		width: 100%;
-	}
-
 	.post {
 		padding: 0px;
 	}
 
 	.post__row {
 		box-sizing: border-box;
-		margin: 0px;
+		/*margin: 0.25rem 5% 0.25rem;*/
+		margin: 10px;
+		width: 100%;
 	}
 
 	.post__body {
 		margin: 10px;
+		width: 100%;
 	}
 }
