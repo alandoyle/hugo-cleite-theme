@@ -139,6 +139,11 @@
 }
 
 @media only screen and (max-width: 576px) {
+
+	html {
+		font-size: 0.95em;
+	}
+
 	.header__title {
 		margin-left: 1.75rem;
 	}

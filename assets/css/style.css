@@ -224,9 +224,7 @@
 }
 
 .footer__social__link {
-	background-color: var(--primary-text);
-	border-radius: 50%;
-	color: var(--white);
+	color: var(--primary-text);
 	font-size: var(--subheader);
 	height: 35px;
 	line-height: 35px;
@@ -236,9 +234,6 @@
 }
 
 .footer__social__link::after {
-	background: transparent;
-	border: 1.5px solid var(--primary-text);
-	border-radius: 50%;
 	bottom: 0;
 	content: "";
 	display: block;
@@ -253,12 +248,13 @@
 .footer__social__link:focus {
 	background-color: transparent;
 	color: var(--secondary-text);
+	border: 1.5px solid var(--primary-text);
+	border-radius: 50%;
 }
 
 .footer__social__link:hover::after,
 .footer__social__link:focus::after {
 	border-color: var(--secondary-text);
-	transform: scale(1.5);
 }
 
 .footer__contact {
