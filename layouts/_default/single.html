@@ -1,8 +1,6 @@
 {{ define "main" }}
 <article class="post">
-	{{ if ne .Type "page" }}
 	<div class="post__row">
-	{{ end }}
 		<header class="post__header">
 			<h1 class="post__title">
 			{{- $faicon := .Params.FaIcon }}
@@ -43,8 +41,8 @@
 		</footer>
 		{{ .Render "tags" }}
 		{{ end }}
-	{{ if ne .Type "page" }}
 	</div>
+	{{ if ne .Type "page" }}
 	<div class="post__row">
 		{{- $email := .Params.email | default site.Params.email }}
 		{{- $author := .Params.author | default site.Params.author }}

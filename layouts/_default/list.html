@@ -1,23 +1,25 @@
 {{ define "main" }}
 <article class="post">
-    <header class="post__header">
-        <h1 class="post__title">{{ .Title }}</h1>
-    </header>
-    <main class="post__body">
-		{{- $isHidden := .Params.cover.hidden | default site.Params.cover.hiddenInSingle | default site.Params.cover.hidden }}
-        {{- partial "cover.html" (dict "cxt" . "IsHome" false "isHidden" $isHidden) }}
-        <p class="post__subtitle">{{ .Description }}</p>
-		<div class="content">
-			{{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "posts") }}
+	<div class="post__row">
+		<header class="post__header">
+			<h1 class="post__title">{{ .Title }}</h1>
+		</header>
+		<main class="post__body">
+			{{- $isHidden := .Params.cover.hidden | default site.Params.cover.hiddenInSingle | default site.Params.cover.hidden }}
+			{{- partial "cover.html" (dict "cxt" . "IsHome" false "isHidden" $isHidden) }}
+			<p class="post__subtitle">{{ .Description }}</p>
+			<div class="content">
+				{{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "posts") }}
 
-			{{ range $index, $element := $paginator.Pages }}
-			{{ if not (in $index "0") }}
-			<hr class="hr-style" />
-			{{ end }}
-			{{ .Render "card" }}
-			{{ end }}
+				{{ range $index, $element := $paginator.Pages }}
+				{{ if not (in $index "0") }}
+				<hr class="hr-style" />
+				{{ end }}
+				{{ .Render "card" }}
+				{{ end }}
 
-			{{ template "_internal/pagination.html" . }}
-		</div>
-	</main>
+				{{ template "_internal/pagination.html" . }}
+			</div>
+		</main>
+	</div>
 {{ end }}
