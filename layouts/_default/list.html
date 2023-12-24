@@ -12,9 +12,6 @@
 				{{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "posts") }}
 
 				{{ range $index, $element := $paginator.Pages }}
-				{{ if not (in $index "0") }}
-				<hr class="hr-style" />
-				{{ end }}
 				{{ .Render "card" }}
 				{{ end }}
 
