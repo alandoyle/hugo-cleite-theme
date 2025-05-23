@@ -10,7 +10,9 @@
 {{ $stt := resources.Get "css/scroll2top.css" }}
 {{ $media := resources.Get "css/media-queries.css" }}
 {{ $animations := resources.Get "css/animations.css" }}
-{{ $bundle := slice $reset $base $style $contact $card $post $homepage $cover $toc $stt $media $animations | resources.Concat "css/bundle.css" }}
+{{ $warning := resources.Get "css/warning.css" }}
+{{ $notification := resources.Get "css/notification.css" }}
+{{ $bundle := slice $reset $base $style $contact $card $post $homepage $cover $toc $stt $media $animations $warning $notification | resources.Concat "css/bundle.css" }}
 
 {{ $css := $bundle | resources.Minify }}
 <link rel="stylesheet" href="{{ $css.Permalink }}">

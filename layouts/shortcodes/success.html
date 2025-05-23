@@ -1,0 +1,21 @@
+{{ with .Get "role" }}
+<div class="cleite-notification-banner cleite-notification-banner--success" role="{{ . }}"
+  aria-labelledby="cleite-notification-banner-title" data-module="cleite-notification-banner">
+  {{ else }}
+  <div class="cleite-notification-banner cleite-notification-banner--success" role="alert"
+    aria-labelledby="cleite-notification-banner-title" data-module="cleite-notification-banner">
+    {{ end }}
+    <div class="cleite-notification-banner__header">
+      <h2 class="cleite-notification-banner__title" id="cleite-notification-banner-title">
+        {{ .Get "title" }}
+      </h2>
+    </div>
+    <div class="cleite-notification-banner__content">
+      <h3 class="cleite-notification-banner__heading">
+        {{ .Get "message" | markdownify }}
+      </h3>
+      {{ with .Inner }}
+      <div class="cleite-body">{{ . | markdownify }}</div>
+      {{ end }}
+    </div>
+  </div>

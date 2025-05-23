@@ -1,0 +1,207 @@
+.cleite-notification-banner {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    margin-bottom: 30px;
+    border: 5px solid #1d70b8;
+    background-color: #1d70b8;
+}
+@media print {
+    .cleite-notification-banner {
+        font-family: sans-serif;
+    }
+}
+@media (min-width: 40.0625em) {
+    .cleite-notification-banner {
+        font-size: 19px;
+        font-size: 1.1875rem;
+        line-height: 1.31579;
+    }
+}
+@media print {
+    .cleite-notification-banner {
+        font-size: 14pt;
+        line-height: 1.15;
+    }
+}
+@media (min-width: 40.0625em) {
+    .cleite-notification-banner {
+        margin-bottom: 50px;
+    }
+}
+.cleite-notification-banner:focus {
+    outline: 3px solid #fd0;
+}
+.cleite-notification-banner__header {
+    padding: 2px 15px 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+@media (min-width: 40.0625em) {
+    .cleite-notification-banner__header {
+        padding: 2px 20px 5px;
+    }
+}
+.cleite-notification-banner__title {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+@media print {
+    .cleite-notification-banner__title {
+        font-family: sans-serif;
+    }
+}
+@media (min-width: 40.0625em) {
+    .cleite-notification-banner__title {
+        font-size: 19px;
+        font-size: 1.1875rem;
+        line-height: 1.31579;
+    }
+}
+@media print {
+    .cleite-notification-banner__title {
+        font-size: 14pt;
+        line-height: 1.15;
+    }
+}
+.cleite-notification-banner__content {
+    color: #0b0c0c;
+    padding: 15px;
+    background-color: #fff;
+}
+@media print {
+    .cleite-notification-banner__content {
+        color: #000;
+    }
+}
+@media (min-width: 40.0625em) {
+    .cleite-notification-banner__content {
+        padding: 20px;
+    }
+}
+.cleite-notification-banner__content > * {
+    box-sizing: border-box;
+}
+.cleite-notification-banner__content > :last-child {
+    margin-bottom: 0;
+}
+.cleite-notification-banner__heading {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1.11111;
+    margin: 0 0 15px;
+    padding: 0;
+}
+@media print {
+    .cleite-notification-banner__heading {
+        font-family: sans-serif;
+    }
+}
+@media (min-width: 40.0625em) {
+    .cleite-notification-banner__heading {
+        font-size: 24px;
+        font-size: 1.5rem;
+        line-height: 1.25;
+    }
+}
+@media print {
+    .cleite-notification-banner__heading {
+        font-size: 18pt;
+        line-height: 1.15;
+    }
+}
+.cleite-notification-banner__link {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: underline;
+}
+@media print {
+    .cleite-notification-banner__link {
+        font-family: sans-serif;
+    }
+}
+.cleite-notification-banner__link:focus {
+    outline: 3px solid rgba(0, 0, 0, 0);
+    background-color: #fd0;
+    box-shadow: 0 -2px #fd0, 0 4px #0b0c0c;
+    text-decoration: none;
+}
+.cleite-notification-banner__link:link,
+.cleite-notification-banner__link:visited {
+    color: #1d70b8;
+}
+.cleite-notification-banner__link:hover {
+    color: #003078;
+}
+.cleite-notification-banner__link:active,
+.cleite-notification-banner__link:focus {
+    color: #0b0c0c;
+}
+.cleite-notification-banner--success {
+    border-color: #00703c;
+    background-color: #00703c;
+}
+.cleite-notification-banner--error {
+    border-color: red;
+    background-color: red;
+}
+.cleite-notification-banner--success .cleite-notification-banner__link:link,
+.cleite-notification-banner--success .cleite-notification-banner__link:visited {
+    color: #00703c;
+}
+.cleite-notification-banner--success .cleite-notification-banner__link:hover {
+    color: #004e2a;
+}
+.cleite-notification-banner--success .cleite-notification-banner__link:active {
+    color: #00703c;
+}
+.cleite-notification-banner--success .cleite-notification-banner__link:focus {
+    color: #0b0c0c;
+}
+.cleite-body {
+    color: #0b0c0c;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+@media print {
+    .cleite-body {
+        color: #000;
+        font-family: sans-serif;
+    }
+}
+@media (min-width: 40.0625em) {
+    .cleite-body {
+        font-size: 19px;
+        font-size: 1.1875rem;
+        line-height: 1.31579;
+    }
+}
+@media print {
+    .cleite-body {
+        font-size: 14pt;
+        line-height: 1.15;
+    }
+}
+@media (min-width: 40.0625em) {
+    .cleite-body {
+        margin-bottom: 20px;
+    }
+}
