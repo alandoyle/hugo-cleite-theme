@@ -7,7 +7,12 @@
         <main class="post__body">
             {{- $isHidden := .Params.cover.hidden | default site.Params.cover.hiddenInSingle | default site.Params.cover.hidden }}
             {{- partial "cover.html" (dict "cxt" . "IsHome" false "isHidden" $isHidden) }}
+            {{ if .Content }}
+            <p class="contact__content">{{ .Content }}</p>
+            {{ end }}
+            {{ if .Description }}
             <p class="contact__content">{{ .Description }}</p>
+            {{ end }}
             <div class="contact">
             {{ if $.Site.Params.form.netlify }}
             <form name="contact" method="POST" data-netlify="true" class="contact__form" id="contactForm">

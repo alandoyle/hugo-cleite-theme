@@ -3,6 +3,19 @@
 {{- $alt := (.Params.cover.alt | default .Params.cover.caption | plainify) }}
 <figure class="{{- if .Params.cover.halfSize }}{{ "entry-cover-half" }}{{ else }}{{ "entry-cover" }}{{- end }}">
     <img loading="lazy" src="{{ (.Params.cover.image) | absURL }}" alt="{{ $alt }}" title="{{ $alt }}">
+    {{ if .Params.cover.showcredits }}
+    {{ if $alt }}
+    <div style="text-align: right;">Photo: 
+    {{ if .Params.cover.imageurl }}
+    <a href="{{ .Params.cover.imageurl }}">
+    {{ end }}
+    {{ $alt }}
+    {{ if .Params.cover.imageurl }}
+    </a>
+    {{ end }}
+    </div>
+    {{ end }}
+    {{ end }}
 </figure>
 {{- end }}{{/* End image */}}
 {{- end -}}{{/* End context */ -}}
