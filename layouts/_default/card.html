@@ -14,16 +14,22 @@
                 </h1>
             </header>
             <main class="card__body">
-                {{- $author := .Params.author | default site.Params.author }} 
+                {{- $author := .Params.author | default site.Params.author }}
                 <p class="card__header__author author">By {{ $author }}.</p>
+                {{- $cover := .Params.cover.image }}
+                {{- $alt := .Params.cover.alt }}
+                {{- if $cover }}
+                <img loading="lazy" src="{{ (.Params.cover.image) | absURL }}" alt="{{ $alt }}" title="{{ $alt }}">
+                {{ end }}
             </main>
             <footer class="card__footer">
-                <a href="{{ .Permalink }}" alt="{{ .Title }}." title="{{ .Title }}.">Read more...</a>
+                {{ .Summary }}
+                <br/><a href="{{ .Permalink }}" alt="{{ .Title }}." title="{{ .Title }}.">Read more...</a>
             </footer>
         </div>
         <div class="card__left">
             {{ if ne .Type "page" }}
-                {{- $author := .Params.author | default site.Params.author }} 
+                {{- $author := .Params.author | default site.Params.author }}
                 {{ if $.Site.Params.posts.showDate }}
                 <p class="card__header__date date">
                     <a href="{{ .Permalink }}" alt="{{ .Title }}." title="{{ .Title }}." class="card__header__link">
@@ -37,3 +43,4 @@
         </div>
     </div>
 </article>
+<hr />
