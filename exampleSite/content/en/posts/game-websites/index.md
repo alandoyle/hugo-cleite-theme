@@ -7,6 +7,7 @@ author: "John Doe"
 images: []
 draft: false
 tags: ["health", "cooking"]
+summary: Life, life and a passion for cooking.
 ---
 
 [How to cheat at dish reviews and get away with it](#). The 6 best dish review twitter feeds to follow. The best ways to utilize minute meals. The best ways to utilize safe food handling tips. The best ways to utilize safe food handling tips. 17 facts about food processors that will impress your friends. How cooking healthy food is making the world a better place. Why you'll never succeed at healthy eating facts. 16 things you don't want to hear about chefs. 9 uses for mexican food.

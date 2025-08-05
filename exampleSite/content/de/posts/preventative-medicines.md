@@ -7,6 +7,7 @@ author: "John Doe"
 images: []
 draft: false
 tags: ["medicine", "health"]
+summary: (GERMAN VERSION) Why vaccination schedules will change your life. How weight loss meal plans can help you live a better life.
 ---
 
 Why vaccination schedules will change your life. How weight loss meal plans can help you live a better life. How not knowing fitness equipment makes you a rookie. The 18 best resources for fitness equipment. 9 problems with home health care products. [17 amazing health care provider picturesi](#). How nutrition facts make you a better lover. The oddest place you will find home health care products. The 15 best health question twitter feeds to follow. Why our world would end if preventative medicines disappeared.
